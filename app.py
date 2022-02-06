@@ -21,9 +21,12 @@ def scrape():
    mars = mongo.db.mars
    mars_data = scraping.scrape_all()
    # the module mentions this like a seperate block, wrong indent?
-   mars.update({}, mars_data, upsert=True)
+   # mars.update({}, mars_data, upsert=True)
+   # the above line of code was originally there??
+   mars.update_one({}, {"$set":mars_data}, upsert=True)
    return redirect('/', code=302)
 
 if __name__ == "__main__":
    app.run()
+
 
