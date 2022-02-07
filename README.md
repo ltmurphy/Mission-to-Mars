@@ -1,5 +1,8 @@
 # Mission-to-Mars
 
+![logo](images/mars-logo.png)
+---
+
 ## Overview
 ### Purpose
 ___
